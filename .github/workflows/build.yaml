@@ -1,0 +1,11 @@
+name: buildBlazorApp
+
+on: push
+
+jobs:
+  install-nuget:
+    runs-on: windows-latest
+    steps:
+      - name : Chekout code
+        uses: actions/checkout@V4
+      
