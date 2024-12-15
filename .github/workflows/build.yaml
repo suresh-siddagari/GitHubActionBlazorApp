@@ -8,4 +8,10 @@ jobs:
     steps:
       - name : Chekout code
         uses: actions/checkout@v4
+      # install dot net
+      - name: install .net version
+        uses: actions/setup-dotnet@v4.1.0
+        with: 
+          dotnet-version: '8.x'
+        
       
