@@ -7,5 +7,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - name : Chekout code
-        uses: actions/checkout@V4
+        uses: actions/checkout@v4
       
