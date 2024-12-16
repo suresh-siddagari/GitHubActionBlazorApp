@@ -36,6 +36,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: BlazorApp-CI
     steps:
+      # list files
+      - name: list files
+        run: ls
+
       - name: Deploy to Azure App
         uses: azure/webapps-deploy@v2
         with:
