@@ -2,6 +2,8 @@ name: buildBlazorApp
 
 on: push
 
+env: outputDir:'./BlazorApp'
+
 jobs:
   BlazorApp-CI:
     runs-on: windows-latest
@@ -19,8 +21,9 @@ jobs:
         run: |
           cd GitHubActionBlazorApp
           dotnet build
-
+          dotnet publish -c Release -o ${{ env.outputDir }}
       # unit test
       - name: run unit tests
-        run: dotnet test
-        working-directory: ./GitHubActionsBlazorApp.Test
+        run: |
+          cd GitHubActionsBlazorApp.Test
+          dotnet test
