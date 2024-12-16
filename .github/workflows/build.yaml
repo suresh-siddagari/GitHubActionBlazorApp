@@ -18,3 +18,7 @@ jobs:
       - name: build application
         run: dotnet build
         working-directory: ./GitHubActionBlazorApp
+
+      # unit test
+      - name: run unit tests
+        run: dotnet test
