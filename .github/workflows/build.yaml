@@ -5,7 +5,7 @@ on: push
 env:
   outputDir: './BlazorApp'
   AZURE_WEBAPP_NAME: sureshappservice
-  AZURE_WEBAPP_PACKAGE_PATH: 'BlazorApp'
+  AZURE_WEBAPP_PACKAGE_PATH: 'GitHubActionBlazorApp/BlazorApp'
 
 jobs:
   BlazorApp-CI:
