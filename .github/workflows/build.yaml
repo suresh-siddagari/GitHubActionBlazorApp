@@ -16,5 +16,4 @@ jobs:
 
       # build application
       - name: build application
-        run: dotnet build
-        working-directory: .
+        run: dotnet build GitHubActionsBlazorApp.sln
