@@ -8,5 +8,12 @@ namespace GitHubActionsBlazorApp.Test
             //testing
             Assert.True(true);
         }
+
+        [Fact]
+        public void Test2()
+        {
+            //testing
+            Assert.True(false);
+        }
     }
 }
