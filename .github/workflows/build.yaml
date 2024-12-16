@@ -22,4 +22,4 @@ jobs:
       # unit test
       - name: run unit tests
         run: dotnet test
-        working-directory: ./GitHubActionsBlazorApp.Tests
+        working-directory: ./GitHubActionsBlazorApp.Test
