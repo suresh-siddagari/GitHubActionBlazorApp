@@ -6,16 +6,16 @@ jobs:
   install-nuget:
     runs-on: windows-latest
     steps:
-      - name : Chekout code
+      - name: Chekout code
         uses: actions/checkout@v4
       # install dot net
       - name: install .net version
         uses: actions/setup-dotnet@v4.1.0
-        with: 
+        with:
           dotnet-version: '8.x'
       - name: restore dependencies
         run: dotnet restore
       # build application
       - name: build application
         run: dotnet build
-        
+        working-directory: ./GitHubActionsBlazorApp
