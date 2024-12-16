@@ -3,7 +3,7 @@ name: buildBlazorApp
 on: push
 
 jobs:
-  install-nuget:
+  BlazorApp-CI:
     runs-on: windows-latest
     steps:
       - name: Chekout code
@@ -16,8 +16,9 @@ jobs:
 
       # build application
       - name: build application
-        run: dotnet build
-        working-directory: ./GitHubActionBlazorApp
+        run: |
+          cd GitHubActionBlazorApp
+          dotnet build
 
       # unit test
       - name: run unit tests
