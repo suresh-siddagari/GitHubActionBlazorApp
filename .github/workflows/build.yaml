@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: blazar-app
-          path: ${{ env.outputDir }}
+          path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
   BlazorApp-CD:
     runs-on: ubuntu-latest
