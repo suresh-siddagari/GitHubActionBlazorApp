@@ -5,7 +5,7 @@ on: push
 env:
   outputDir: './BlazorApp'
   AZURE_WEBAPP_NAME: sureshappservice
-  AZURE_WEBAPP_PACKAGE_PATH: './GitHubActionBlazorApp/BlazorApp'
+  AZURE_WEBAPP_PACKAGE_PATH: './BlazorApp'
 
 jobs:
   BlazorApp-CI:
@@ -33,15 +33,6 @@ jobs:
         run: |
           cd GitHubActionsBlazorApp.Test
           dotnet test
-
-  BlazorApp-CD:
-    runs-on: ubuntu-latest
-    needs: BlazorApp-CI
-    steps:
-      # list files
-      - name: list files
-        run: ls
-
       - name: Deploy to Azure App
         uses: azure/webapps-deploy@v2
         with:
