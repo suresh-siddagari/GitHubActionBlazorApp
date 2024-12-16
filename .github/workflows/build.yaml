@@ -25,9 +25,7 @@ jobs:
           cd GitHubActionBlazorApp
           dotnet build
           dotnet publish GitHubActionBlazorApp.csproj -c Release -o ${{ env.outputDir }} -r linux-x64 --self-contained true /p:UseAppHost=true
-      # list files
-      - name: list files
-        run: ls -R
+
       # unit test
       - name: run unit tests
         run: |
@@ -44,16 +42,16 @@ jobs:
     needs: BlazorApp-CI
     steps:
       # list files
-      - name: list files
-        run: ls -R .
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: blazar-app
-
+      - name: list files
+        run: ls -R
       - name: Deploy to Azure App
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          package: './blazar-app'
+          package: './GitHubActionBlazorApp/blazar-app'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
