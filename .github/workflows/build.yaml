@@ -48,7 +48,7 @@ jobs:
         with:
           name: blazar-app
       - name: list files
-        run: ls -R
+        run: ls -R ../
       - name: Deploy to Azure App
         uses: azure/webapps-deploy@v2
         with:
