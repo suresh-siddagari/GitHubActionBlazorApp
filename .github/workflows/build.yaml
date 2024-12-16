@@ -5,7 +5,7 @@ on: push
 env:
   outputDir: './BlazorApp'
   AZURE_WEBAPP_NAME: sureshappservice
-  AZURE_WEBAPP_PACKAGE_PATH: './GitHubActionBlazorApp/BlazorApp'
+  AZURE_WEBAPP_PACKAGE_PATH: './BlazorApp'
 
 jobs:
   BlazorApp-CI:
@@ -27,7 +27,7 @@ jobs:
           dotnet publish GitHubActionBlazorApp.csproj -c Release -o ${{ env.outputDir }} -r linux-x64 --self-contained true /p:UseAppHost=true
       # list files
       - name: list files
-        run: ls -R ${{ env.outputDir }}
+        run: ls -R
       # unit test
       - name: run unit tests
         run: |
