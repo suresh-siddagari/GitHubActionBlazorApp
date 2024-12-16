@@ -1,0 +1,1 @@
+[![buildBlazorApp](https://github.com/suresh-siddagari/GitHubActionBlazorApp/actions/workflows/build.yaml/badge.svg)](https://github.com/suresh-siddagari/GitHubActionBlazorApp/actions/workflows/build.yaml)
