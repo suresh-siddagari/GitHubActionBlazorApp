@@ -27,7 +27,7 @@ jobs:
           dotnet publish GitHubActionBlazorApp.csproj -c Release -o ${{ env.outputDir }} -r linux-x64 --self-contained true /p:UseAppHost=true
       # list files
       - name: list files
-        run: ls
+        run: ls -R ${{ env.outputDir }}
       # unit test
       - name: run unit tests
         run: |
