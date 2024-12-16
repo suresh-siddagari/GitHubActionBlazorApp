@@ -9,7 +9,7 @@ env:
 
 jobs:
   BlazorApp-CI:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Chekout code
         uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
           dotnet test
 
   BlazorApp-CD:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     needs: BlazorApp-CI
     steps:
       - name: Deploy to Azure App
