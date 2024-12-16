@@ -2,7 +2,8 @@ name: buildBlazorApp
 
 on: push
 
-env: outputDir:'./BlazorApp'
+env:
+  outputDir: './BlazorApp'
 
 jobs:
   BlazorApp-CI:
