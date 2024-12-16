@@ -23,6 +23,11 @@ jobs:
           cd GitHubActionBlazorApp
           dotnet build
           dotnet publish -c Release -o ${{ env.outputDir }}
+      # list files
+      - name: list files
+        run: |
+          cd GitHubActionBlazorApp
+          ls -R
       # unit test
       - name: run unit tests
         run: |
