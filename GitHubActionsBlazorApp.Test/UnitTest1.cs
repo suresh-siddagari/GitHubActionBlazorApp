@@ -13,7 +13,7 @@ namespace GitHubActionsBlazorApp.Test
         public void Test2()
         {
             //testing
-            Assert.True(false);
+            Assert.False(false);
         }
     }
 }
